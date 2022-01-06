@@ -14,6 +14,10 @@ func (m Mahasiswa) SayHello() {
 	fmt.Printf("Hello %s, I'm %d years old\n", m.Nama, m.Umur)
 }
 
+func (m Mahasiswa) Next5Years() {
+	fmt.Printf("5 years again, I'm %d years old\n\n", m.Umur+5)
+}
+
 // inisiasi object
 var mhs = Mahasiswa{
 	Nama:  "Sahril Mahendra",
@@ -35,6 +39,11 @@ func NewMahasiswa(nama, nim, email string, umur int) Mahasiswa {
 
 func main() {
 	mhs.SayHello()
+	mhs.Next5Years()
 
 	NewMahasiswa("ahmad", "1601212034", "ahmad@example.com", 17).SayHello()
+	NewMahasiswa("ahmad", "1601212034", "ahmad@example.com", 17).Next5Years()
+
+	NewMahasiswa("mahendra", "1705098247", "mahen@example.com", 16).SayHello()
+	NewMahasiswa("mahendra", "1705098247", "mahen@example.com", 16).Next5Years()
 }
