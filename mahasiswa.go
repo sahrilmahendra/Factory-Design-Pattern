@@ -11,7 +11,7 @@ type Mahasiswa struct {
 }
 
 func (m Mahasiswa) SayHello() {
-	fmt.Printf("Hello %s", m.Nama)
+	fmt.Printf("Hello %s, I'm %d years old\n", m.Nama, m.Umur)
 }
 
 // inisiasi object
@@ -35,4 +35,6 @@ func NewMahasiswa(nama, nim, email string, umur int) Mahasiswa {
 
 func main() {
 	mhs.SayHello()
+
+	NewMahasiswa("ahmad", "1601212034", "ahmad@example.com", 17).SayHello()
 }
